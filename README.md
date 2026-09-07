@@ -8,12 +8,11 @@ Phase 1 static marketing site for **1787 TACTICAL, LLC.** — Type 07 FFL, Loxah
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home — brand, tagline, appointment CTA, featured builds |
-| `builds.html` | All sample product cards (AR-15s + ProMag) with call-to-buy CTAs |
+| `index.html` | Home — brand, appointment CTA, full inventory (`#inventory`), ammo scaffold (`#ammo`) |
 | `about.html` | FFL trust, transfer fees, payments, NFA, 4473/FDLE policies |
 | `contact.html` | NAP, phone, email mailto, appointment scheduling windows |
 | `sitemap.xml` / `robots.txt` | SEO crawl files |
-| `images/` | Compressed product JPEGs (local; see image note) |
+| `images/` | Product JPEGs (local; see image note). Logo asset pending (`images/logo.png`) |
 
 ## Contact (NAP)
 
@@ -41,29 +40,37 @@ Public site shows **Type 07 FFL** / licensed manufacturer only. **Do not publish
 | `/about` | `/about.html` |
 | `/contact` | `/contact.html` |
 | `/c/cart` | `/` (drop cart) |
-| `/builds` | `/builds.html` (optional pretty URL) |
+| `/builds.html` | `/#inventory` |
+| `/builds` | `/#inventory` |
 
 Optional: `/ffl` → `/about.html`.
 
 ## Dropped from Articulation
 
 - Cart chrome and `/c/cart`
-- $0 “Product Name” placeholder ammo card
+- $0 “Product Name” placeholder ammo card (ammo section scaffolded on home; prices TBD)
 - Dead “Get Started” / “More…” menus
 - Articulation contact form (replaced with tel + mailto)
+- Standalone `builds.html` (inventory lives on home `#inventory`)
 
 ## Products (display only)
 
 | Name | Price |
 |------|-------|
-| AR-15 Sample Build A | $400 |
-| AR-15 Sample Build B | $425 |
-| AR-15 Sample Build C | $400 |
-| AR-15 Sample Build D | $415 |
+| AR-15 Build A | $400 |
+| AR-15 Build B | $425 |
+| AR-15 Build C | $400 |
+| AR-15 Build D | $415 |
 | ProMag 30 Round | $12 |
 | ProMag 42 Round | $15 |
 
+Ammo: structure on home with “Call for current ammo pricing” — fill exact prices when Paul/CoS provide them (`<!-- TODO: Paul/CoS ammo prices -->`).
+
 Prices are indicative — call to confirm. No add-to-cart.
+
+## Logo note
+
+No Paul logo file in `images/` yet (only product JPGs). Home uses a clean text wordmark (`1787` in accent). When ready, drop `images/logo.png` and swap the header brand mark (HTML comment marks the spot).
 
 ## Image assets note
 
@@ -74,6 +81,7 @@ CDN base: `https://a1694c05-02c2-45b0-801e-8c7aad8cbc80.assets.articulation.webs
 ## Deploy
 
 Public GitHub repo → Porkbun Static Hosting. Prefer PRs for content changes. **Do not merge** until Paul reviews.
+Porkbun auto-deploys from `main` — leave review PRs unmerged.
 
 ## Out of scope (v1)
 

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /c/cart
+Disallow: /search/results
+
+Sitemap: https://www.1787tactical.com/sitemap.xml

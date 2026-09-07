@@ -1,0 +1,2 @@
+/* Optional local stylesheet — pages currently use Tailwind CDN + inline accents */
+:root { --accent: #c4a35a; }
